@@ -1,4 +1,4 @@
-# sethuProject
+# Code Challenge Project - Performance Review System
 
 Due to project load i removed node modules please include it using npm install
 
