@@ -1,0 +1,55 @@
+<div class="card">
+    <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Employee Detail table</h3>
+    <h5>* Full Name,Designation,mail,Performance Category, Feeback Editable</h5>
+    <div class="card-body">
+      <div id="table" class="table-editable">
+        <div style="margin:5px">
+          <button mat-raised-button type="button" style="margin:5px" class="btn btn-light" (click)="addNewEmployee()">Add New Employee with performance review</button>
+        </div>
+        <table class="table table-bordered table-responsive-md table-striped text-center">
+          <tr>
+            <th class="text-center">Employee ID</th>
+            <th class="text-center">Full Name</th>
+            <th class="text-center">Designation</th>
+            <th class="text-center">Mail Contact</th>
+            <th class="text-center">Performance Category</th>
+            <th class="text-center">Feedback</th>
+            <th class="text-center">Edit</th>
+            <th class="text-center">Remove</th>
+          </tr>
+          <tr *ngFor="let person of getEmployeeDetailsList; let id = index">
+            <td>
+              <span>{{person.id}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (blur)="updateList(person.id, 'full_name', $event)">{{person.full_name}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (blur)="updateList(person.id, 'Designation', $event)">{{person.designation}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (blur)="updateList(person.id, 'Mail', $event)">{{person.mail}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (blur)="updateList(person.id, 'performanceCategory', $event)">{{person.performanceCategory}}</span>
+            </td>
+            <td>
+              <span contenteditable="true" (blur)="updateList(person.id, 'feedback', $event)">{{person.feedback}}</span>
+            </td>
+            <td>
+                <span class="table-edit">
+                  <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="updateEmployeeDetails(person)">Update</button>
+                </span>
+              </td>
+            <td>
+              <span class="table-remove">
+                <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="removeEmployeeDetails(person)">Remove</button>
+              </span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Editable table -->

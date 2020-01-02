@@ -1,0 +1,30 @@
+<div style="margin:10px">
+    <span> * TBD - To Be Decided </span><br>
+    <span>Feedback Required performance reviews only listed</span>
+</div>
+
+<div>
+<table mdbTable hover=true bordered=true>
+    <tbody>
+        <tr mdbTableCol>
+            <th scope="row">ID</th>
+            <td>PerformanceCategory</td>
+            <td>FeedBack</td>
+            <td>Employee Name</td>
+            <td>Edit</td>
+        </tr>
+      <tr mdbTableCol *ngFor="let el of getPErformanceListNeedFeedback">
+        <th scope="row">{{el.id}}</th>
+        <td>{{el.performanceCategory}}</td>
+        <td>{{el.feedback}}</td>
+        <td>{{el.fullname}}</td>
+        <td>
+            <span class="table-edit">
+              <button type="button" mdbBtn color="danger" rounded="true" size="sm" class="my-0" (click)="submitFeedBack(el)">Edit</button>
+            </span>
+          </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  

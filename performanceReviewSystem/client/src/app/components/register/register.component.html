@@ -1,0 +1,27 @@
+<!-- Default form login -->
+<div style="margin: auto;width: 35%;">
+<form class="text-center border border-light p-5" [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" style="width:100%">
+
+    <p class="h4 mb-4">Registration</p>
+    <input type="text" formControlName="fullName" id="defaultfullName" mdbInput
+    class="form-control mb-4" placeholder="Name">
+
+
+  <input type="text" formControlName="mail" id="defaultmail" mdbInput
+    class="form-control mb-4" placeholder="mail">
+
+    <input type="password" formControlName="pass" id="defaultpassword" mdbInput
+    class="form-control mb-4" placeholder="password">
+
+    <input type="radio" value="Admin" formControlName="userType"> Admin
+    <input type="radio" value="Employee" formControlName="userType"> Employee
+
+
+
+    <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+    mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Register</button>
+
+   
+</form>
+</div>
+<!-- Default form login -->

@@ -1,0 +1,27 @@
+<!-- Default form login -->
+<form class="text-center border border-light p-5" [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+
+    <p class="h4 mb-4">Employee Detail</p>
+
+    <input type="number" formControlName="id" id="defaultemployeeId" mdbInput
+    class="form-control mb-4" placeholder="Employee ID">
+
+    <input type="text" formControlName="full_name" id="defaultEmployeeName" mdbInput
+    class="form-control mb-4" placeholder="Name">
+
+
+  <input type="text" formControlName="designation" id="defaultDesignation" mdbInput
+    class="form-control mb-4" placeholder="Designation">
+
+    <input type="mail" formControlName="mail" id="defaultMail" mdbInput
+    class="form-control mb-4" placeholder="xyz@mil.com">
+
+    <input type="number" formControlName="performanceDetailId" id="defaultperformanceDetailId" mdbInput
+    class="form-control mb-4" placeholder="enter performance review in number like ex: 1: good, 2:average, 3: moderate, 4:verygood"> 
+
+
+  <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+    mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Add Employee</button>
+
+</form>
+<!-- Default form login -->

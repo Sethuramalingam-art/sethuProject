@@ -1,0 +1,30 @@
+
+<!-- Default form contact -->
+<form class="text-center border border-light p-5" [formGroup]="feedbackForm" (ngSubmit)="onSubmit()">
+
+  <p class="h4 mb-4">Feedback Submission</p>
+
+
+  <input type="text" formControlName="employeeName" id="defaultEmployeeName" mdbInput
+    class="form-control mb-4" placeholder="Name">
+
+
+  <input type="text" formControlName="performanceCategory" id="defaultperformanceCategory" mdbInput
+    class="form-control mb-4" placeholder="Performance Category" readonly>
+
+  <div class="form-group">
+    <textarea formControlName="feedback" class="form-control rounded-0" mdbInput id="defaultFeedback"
+      rows="3" placeholder="Please add Feed back"></textarea>
+  </div>
+
+
+  <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+    mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Submit Feedback</button>
+
+  <div>
+    <span style="cursor: pointer;color:blue" (click)="gotoBack()">back to permance list</span>
+  </div>
+
+</form>
+<!-- Default form contact -->
+

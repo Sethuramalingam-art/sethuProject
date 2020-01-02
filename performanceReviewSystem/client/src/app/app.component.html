@@ -1,0 +1,40 @@
+<div>
+  <span style="margin: 5px;text-transform: uppercase;font-family: sans-serif;font-weight: 700;">Performance Review System</span>
+  <!-- <div *ngIf="position === 0">
+    <span style="margin-bottom:5px;" >Can you please define position of you?</span><br>
+    <mat-radio-group name="position" ngModel required #position="ngModel">
+      <mat-radio-button value="1">ADMIN VIEW</mat-radio-button><br>
+      <mat-radio-button value="2">EMPLOYEE VIEW</mat-radio-button>
+    </mat-radio-group><br>
+    <button mat-raised-button (click)=getEmployeePosition(position.value)>Get Into</button>
+    </div> -->
+
+ <!-- Default form login -->
+<div style="margin: auto;width: 35%;" *ngIf="showLogin">
+  <form class="text-center border border-light p-5" [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" style="width:100%">
+  
+      <p class="h4 mb-4">Login</p>
+      <input type="text" formControlName="mail" id="defaultmail" mdbInput
+      class="form-control mb-4" placeholder="mail">
+
+  
+      <input type="password" formControlName="pass" id="defaultpassword" mdbInput
+      class="form-control mb-4" placeholder="password"> 
+       
+  
+      <button mdbBtn color="info" outline="true" block="true" class="z-depth-0 my-4 waves-effect"
+      mdbWavesEffect type="submit" [disabled]="disabledSubmitButton">Login</button>
+
+      <p>Not a member?
+        <span (click)="gotoRegister()" style="cursor: pointer;color:blue">Register</span>
+      </p>
+       
+  </form>
+  </div>
+  <!-- Default form login -->
+  
+
+
+    
+    <router-outlet></router-outlet>
+</div>
