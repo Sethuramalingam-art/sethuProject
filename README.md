@@ -2,4 +2,4 @@
 
 Due to project load i removed node modules please include it using npm install
 
-Please find the document for application instructions and workflow 
+Please find the document for application instructions and workflow. It consists complete work flow of application
