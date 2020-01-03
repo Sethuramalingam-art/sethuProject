@@ -3,20 +3,27 @@
 While uploading project in git due lot of file upload removed node modules from the project.please include it using npm install like below
 
 FullStackEngineerChallenge-master\FullStackEngineerChallenge-master\performanceReviewFeedbackSystem\client>npm install
+
 FullStackEngineerChallenge-master\FullStackEngineerChallenge-master\performanceReviewFeedbackSystem\server>npm install
 
 Localhost:4200
 
 for build app: 
+
 FullStackEngineerChallenge-master\FullStackEngineerChallenge-master\performanceReviewFeedbackSystem\client>ng build
+
 for run app:
+
 FullStackEngineerChallenge-master\FullStackEngineerChallenge-master\performanceReviewFeedbackSystem\client>ng serve
 
 Localhost:3000
 
 for build api: 
+
 FullStackEngineerChallenge-master\FullStackEngineerChallenge-master\performanceReviewFeedbackSystem\server>ng build
+
 for run api:
+
 FullStackEngineerChallenge-master\FullStackEngineerChallenge-master\performanceReviewFeedbackSystem\server>npm run server
 
 
